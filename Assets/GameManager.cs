@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private bool gameEnded = false;
 
     //unity objects
+    public Image crosshair;
     public GameObject winUi;
     public GameObject loseUi;
     public Text finalScore;
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
     public Camera camera4;
     public Camera camera5;
 
-    int currentCamera = 0;
+    //int currentCamera = 0;
 
     Camera[] cameras = new Camera[6];
     private void Start()
@@ -43,6 +44,8 @@ public class GameManager : MonoBehaviour
     {
         //camera buttons
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            crosshair.gameObject.SetActive(true);       //active crosshair for this camera view
+
             cameras[0].gameObject.SetActive(true);
             cameras[1].gameObject.SetActive(false);
             cameras[2].gameObject.SetActive(false);
@@ -53,6 +56,8 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            crosshair.gameObject.SetActive(false);       //deactive crosshair for this camera view
+
             cameras[0].gameObject.SetActive(false);
             cameras[1].gameObject.SetActive(true);
             cameras[2].gameObject.SetActive(false);
@@ -62,6 +67,8 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            crosshair.gameObject.SetActive(false);       //deactive crosshair for this camera view
+
             cameras[0].gameObject.SetActive(false);
             cameras[1].gameObject.SetActive(false);
             cameras[2].gameObject.SetActive(true);
@@ -71,6 +78,8 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
+            crosshair.gameObject.SetActive(false);       //deactive crosshair for this camera view
+
             cameras[0].gameObject.SetActive(false);
             cameras[1].gameObject.SetActive(false);
             cameras[2].gameObject.SetActive(false);
@@ -80,6 +89,8 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
+            crosshair.gameObject.SetActive(false);       //deactive crosshair for this camera view
+
             cameras[0].gameObject.SetActive(false);
             cameras[1].gameObject.SetActive(false);
             cameras[2].gameObject.SetActive(false);
@@ -89,6 +100,8 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
+            crosshair.gameObject.SetActive(false);       //deactive crosshair for this camera view
+
             cameras[0].gameObject.SetActive(false);
             cameras[1].gameObject.SetActive(false);
             cameras[2].gameObject.SetActive(false);

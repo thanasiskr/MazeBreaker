@@ -1216,12 +1216,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 91.119, z: 0}
---- !u!1 &734995093 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8243581962578287359, guid: 27c485b1fe828b9468da55c6f0a98ffc,
-    type: 3}
-  m_PrefabInstance: {fileID: 8243581961395587260}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1017372012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2413,6 +2407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2471c743bc0c17f48bef941fd750954f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crosshair: {fileID: 542775176}
   winUi: {fileID: 1135815596}
   loseUi: {fileID: 1074454049}
   finalScore: {fileID: 1023843316}
@@ -2659,7 +2654,7 @@ PrefabInstance:
         type: 3}
       propertyPath: terrain
       value: 
-      objectReference: {fileID: 734995093}
+      objectReference: {fileID: 0}
     - target: {fileID: 8243581962578287353, guid: 27c485b1fe828b9468da55c6f0a98ffc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -8,9 +8,7 @@ public class createBlocks : MonoBehaviour
 {
     //unity objects
     public GameManager manager;
-    public GameObject terrain;
     
-
     public Transform player;
     public GameObject player_obj;
 
@@ -63,8 +61,8 @@ public class createBlocks : MonoBehaviour
 
         source.clip = backgroundMusic;
         source.Play();
-
-        StreamReader reader = new StreamReader("Assets/scripts/ex.maz");
+        //path should be"Assets/scripts/ex.maz"       
+        StreamReader reader = new StreamReader("Assets / scripts / ex.maz");
 
         //game starts hide the cursor!
         Cursor.visible= false;
