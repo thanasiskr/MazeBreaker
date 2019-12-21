@@ -63,7 +63,7 @@ public class createBlocks : MonoBehaviour
         source.clip = backgroundMusic;
         source.Play();
 
-        StreamReader reader = new StreamReader("C:/Users/Thana/UnityProjects/MazeBreaker/Assets/scripts/ex.maz");
+        StreamReader reader = new StreamReader("Assets/scripts/ex.maz");
 
         //game starts hide the cursor!
         Cursor.visible= false;
