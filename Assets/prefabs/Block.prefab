@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36cfec591d7b8c48aa11328ba6e3680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debris: {fileID: 8382822729119369099, guid: 3e92cd242acb115408f20bcb7eec1c63, type: 3}
+  debris: {fileID: 0}
   pickup_axe: {fileID: 7830331303759035674, guid: 002587e7bb5aa304a8957b216c9e12ec,
     type: 3}
   crumble: {fileID: 8300000, guid: 6765d094943fb5747aaa6bfc34da9287, type: 3}

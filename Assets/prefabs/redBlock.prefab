@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 3095256340399310714, guid: c6d340f48c759a74aa98a5ec5ff52fc2,
         type: 3}
       propertyPath: m_Name
-      value: Block
+      value: redBlock
       objectReference: {fileID: 0}
     - target: {fileID: 3095256340399310718, guid: c6d340f48c759a74aa98a5ec5ff52fc2,
         type: 3}
@@ -72,5 +72,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6677415709279429989, guid: c6d340f48c759a74aa98a5ec5ff52fc2,
+        type: 3}
+      propertyPath: debris
+      value: 
+      objectReference: {fileID: 7011611199665839317, guid: 22c3111364d057c43af292db0b3307b5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6d340f48c759a74aa98a5ec5ff52fc2, type: 3}

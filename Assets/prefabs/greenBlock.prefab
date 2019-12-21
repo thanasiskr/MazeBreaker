@@ -13,6 +13,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7830331303759035674, guid: 002587e7bb5aa304a8957b216c9e12ec,
         type: 3}
+    - target: {fileID: 114607596749899836, guid: 315d75082aa32c7489bd173c660253b2,
+        type: 3}
+      propertyPath: debris
+      value: 
+      objectReference: {fileID: 220220897881832086, guid: 221264b8cf6e53f49acabd6604e2cb6b,
+        type: 3}
     - target: {fileID: 8631524766339476001, guid: 315d75082aa32c7489bd173c660253b2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -8,6 +8,7 @@ public class createBlocks : MonoBehaviour
 {
     //unity objects
     public GameManager manager;
+    public GameObject terrain;
     
 
     public Transform player;
@@ -97,7 +98,6 @@ public class createBlocks : MonoBehaviour
         //Display score is 0
 
         scoreText.text ="Score:" +score.ToString();
-        
 
         string[] types=new string[16];
         for (i = 0; i < L; i++) //level for loop
