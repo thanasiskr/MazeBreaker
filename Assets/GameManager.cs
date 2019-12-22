@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameManager : MonoBehaviour
@@ -8,6 +9,9 @@ public class GameManager : MonoBehaviour
     private int N;
     private int L;
     private int currentScore;
+
+    public GameObject player;
+    private ArrayList teleporterList;
     private bool gameEnded = false;
 
     //unity objects
@@ -26,6 +30,7 @@ public class GameManager : MonoBehaviour
     public Camera camera5;
 
     //int currentCamera = 0;
+   
 
     Camera[] cameras = new Camera[6];
     private void Start()
@@ -112,9 +117,22 @@ public class GameManager : MonoBehaviour
 
 
     }
-    
-    
+
+
     //getters and setters for gameManager fields
+
+    public void setPlayer(GameObject p) {
+        player = p;
+    }
+    public GameObject getPlayer() {
+        return player;
+    }
+    public void setTeleporterList(ArrayList teleporters) {
+        teleporterList = teleporters;
+    }
+    public ArrayList getTeleporterList() {
+        return teleporterList;
+    }
     public int getCurrentScore() {
         return currentScore;
     }

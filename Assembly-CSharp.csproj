@@ -77,6 +77,7 @@
     <Compile Include="Assets\scripts\rotateCamera.cs" />
     <Compile Include="Assets\scripts\startMenu.cs" />
     <Compile Include="Assets\scripts\Target.cs" />
+    <Compile Include="Assets\scripts\teleporter_script.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Thana/UnityProjects/MazeBreaker/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

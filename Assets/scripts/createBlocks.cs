@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System;
 using System.IO;
-
+using System.Collections;
 
 public class createBlocks : MonoBehaviour
 {
@@ -25,6 +25,7 @@ public class createBlocks : MonoBehaviour
     public GameObject greenBlock;
     public GameObject blueBlock;
 
+
     //variables
      int N = 20;
      int L = 20;
@@ -34,6 +35,10 @@ public class createBlocks : MonoBehaviour
      Vector3[] emptySpots =new Vector3[5];       //number of empty position vectors for the player location
      int emptyCounter=0;                         //current items in emptySpots 
      bool player_active = false;                 //by default player item is disabled until put in position
+
+    //teleporter staff
+    ArrayList teleporters=new ArrayList();
+    public GameObject teleporter;
 
     
     void setPlayerPosition(Vector3[]array) {
@@ -61,8 +66,8 @@ public class createBlocks : MonoBehaviour
 
         source.clip = backgroundMusic;
         source.Play();
-        //path should be"Assets/scripts/ex.maz"       
-        StreamReader reader = new StreamReader("Assets / scripts / ex.maz");
+        //"Assets/scripts/ex.maz"       C:/Users/Thana/UnityProjects/MazeBreaker/Assets/scripts/ex.maz
+        StreamReader reader = new StreamReader("C:/Users/Thana/UnityProjects/MazeBreaker/Assets/scripts/tester.maz");
 
         //game starts hide the cursor!
         Cursor.visible= false;
@@ -152,6 +157,15 @@ public class createBlocks : MonoBehaviour
                         }
                         
                     }
+                    if (types[k].Equals("W"))
+                    {
+                        Debug.Log("Building teleporter");
+                        Instantiate(teleporter, pos, Quaternion.identity);
+                        teleporters.Add(pos);                                   //add teleporter position to arrList
+
+                    }
+
+
                     x = x + 5;
                     
                 }
@@ -166,10 +180,15 @@ public class createBlocks : MonoBehaviour
 
         }
         setPlayerPosition(emptySpots);
+
         //The gameManager will hold important game information
         manager.setN(N);
         manager.setLevelNumber(L);
         manager.setAxeNumber(K);
+
+        //teleporter stuff
+        manager.setTeleporterList(teleporters);
+        //manager.setPlayer(player.gameObject);
        
     }
    

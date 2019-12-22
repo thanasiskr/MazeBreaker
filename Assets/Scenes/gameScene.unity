@@ -617,16 +617,17 @@ GameObject:
   - component: {fileID: 516616177}
   - component: {fileID: 516616176}
   - component: {fileID: 516616175}
+  - component: {fileID: 516616180}
+  - component: {fileID: 516616186}
   - component: {fileID: 516616182}
+  - component: {fileID: 516616185}
   - component: {fileID: 516616183}
+  - component: {fileID: 516616184}
   - component: {fileID: 516616181}
   - component: {fileID: 516616179}
-  - component: {fileID: 516616180}
-  - component: {fileID: 516616184}
-  - component: {fileID: 516616185}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -828,7 +829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f560d949357b8c14db02375ab2dd4e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 516616185}
+  source: {fileID: 516616184}
   jumpsound: {fileID: 8300000, guid: e0f05742ecd1fb54889f5de3e67115a4, type: 3}
   manager: {fileID: 2066184895}
   camera: {fileID: 1093606251}
@@ -847,6 +848,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bump: {fileID: 8300000, guid: 62fc7387054d643478f99a12fdadee45, type: 3}
   source: {fileID: 516616180}
+  manager: {fileID: 2066184895}
+  player: {fileID: 516616174}
 --- !u!114 &516616183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -864,7 +867,7 @@ MonoBehaviour:
   scoreText: {fileID: 1830303177}
   manager: {fileID: 2066184895}
   hitting: {fileID: 8300000, guid: bf064f0e44ee5f542a610bdfe0896f9f, type: 3}
-  forHit: {fileID: 516616184}
+  forHit: {fileID: 516616185}
   cam: {fileID: 1093606250}
   pickaxe: {fileID: 157369345}
   red: {fileID: 2100000, guid: 8deb33e95fdbc9f40916ec506f4677b6, type: 2}
@@ -967,6 +970,102 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!82 &516616185
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516616174}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &516616186
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2407,6 +2506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2471c743bc0c17f48bef941fd750954f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 516616174}
   crosshair: {fileID: 542775176}
   winUi: {fileID: 1135815596}
   loseUi: {fileID: 1074454049}
@@ -2655,6 +2755,18 @@ PrefabInstance:
       propertyPath: terrain
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8243581962578287348, guid: 27c485b1fe828b9468da55c6f0a98ffc,
+        type: 3}
+      propertyPath: teleporterCube
+      value: 
+      objectReference: {fileID: 7482785175370246972, guid: 73b144344f1d19940b1a676cd6cecf34,
+        type: 3}
+    - target: {fileID: 8243581962578287348, guid: 27c485b1fe828b9468da55c6f0a98ffc,
+        type: 3}
+      propertyPath: teleporter
+      value: 
+      objectReference: {fileID: 6517862082790568670, guid: 3d7dcac624068674b90adb91d65ac806,
+        type: 3}
     - target: {fileID: 8243581962578287353, guid: 27c485b1fe828b9468da55c6f0a98ffc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
