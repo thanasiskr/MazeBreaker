@@ -8,7 +8,8 @@ public class createBlocks : MonoBehaviour
 {
     //unity objects
     public GameManager manager;
-    
+    public GameObject teleporter;
+
     public Transform player;
     public GameObject player_obj;
 
@@ -38,7 +39,7 @@ public class createBlocks : MonoBehaviour
 
     //teleporter staff
     ArrayList teleporters=new ArrayList();
-    public GameObject teleporter;
+    
 
     
     void setPlayerPosition(Vector3[]array) {

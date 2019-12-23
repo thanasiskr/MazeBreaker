@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     //fields
+    private bool teleported = false;
+
     private int numberofAxes;
     private int N;
     private int L;
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour
     {
         //camera buttons
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            crosshair.gameObject.SetActive(true);       //active crosshair for this camera view
+            crosshair.gameObject.SetActive(true);       //activate crosshair for this camera view
 
             cameras[0].gameObject.SetActive(true);
             cameras[1].gameObject.SetActive(false);
@@ -61,7 +63,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            crosshair.gameObject.SetActive(false);       //deactive crosshair for this camera view
+            crosshair.gameObject.SetActive(false);       //deactivate crosshair for this camera view
 
             cameras[0].gameObject.SetActive(false);
             cameras[1].gameObject.SetActive(true);
@@ -72,7 +74,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            crosshair.gameObject.SetActive(false);       //deactive crosshair for this camera view
+            crosshair.gameObject.SetActive(false);       //deactivate crosshair for this camera view
 
             cameras[0].gameObject.SetActive(false);
             cameras[1].gameObject.SetActive(false);
@@ -83,7 +85,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            crosshair.gameObject.SetActive(false);       //deactive crosshair for this camera view
+            crosshair.gameObject.SetActive(false);       //deactivate crosshair for this camera view
 
             cameras[0].gameObject.SetActive(false);
             cameras[1].gameObject.SetActive(false);
@@ -94,7 +96,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            crosshair.gameObject.SetActive(false);       //deactive crosshair for this camera view
+            crosshair.gameObject.SetActive(false);       //deactivate crosshair for this camera view
 
             cameras[0].gameObject.SetActive(false);
             cameras[1].gameObject.SetActive(false);
@@ -105,7 +107,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            crosshair.gameObject.SetActive(false);       //deactive crosshair for this camera view
+            crosshair.gameObject.SetActive(false);       //deactivate crosshair for this camera view
 
             cameras[0].gameObject.SetActive(false);
             cameras[1].gameObject.SetActive(false);
@@ -121,6 +123,13 @@ public class GameManager : MonoBehaviour
 
     //getters and setters for gameManager fields
 
+    public bool getTeleported()
+    {
+       return teleported;
+    }
+    public void setTeleported(bool tele) {
+        teleported = tele;
+    }
     public void setPlayer(GameObject p) {
         player = p;
     }

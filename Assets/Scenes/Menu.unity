@@ -2408,6 +2408,8 @@ MonoBehaviour:
 
     To play change to the default view (Button1).
 
+    Hop into a black cube to teleport to a higher level.
+
     Each axe breaks after 10 hits.
 
 '

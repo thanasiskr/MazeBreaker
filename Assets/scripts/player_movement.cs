@@ -6,7 +6,7 @@ public class player_movement : MonoBehaviour
 	public AudioSource source;
 	public AudioClip jumpsound;
 	public GameManager manager;
-	public Transform camera;
+	new public Transform camera;			//hides component
 	public Rigidbody rb;
 	//fields
 	private float force = 7.0f;
@@ -38,9 +38,6 @@ public class player_movement : MonoBehaviour
 		{
 			transform.position -= camera.right * Time.deltaTime * force;
 
-			//movement with rigid body doesnt move acc to camera
-			//rb.AddForce(-force * Time.deltaTime, 0, 0);
-
 		}
 		if (Input.GetKey("space"))
 		{
@@ -52,6 +49,7 @@ public class player_movement : MonoBehaviour
 		{
 			if (rb.position.y >= 5 *manager.getLevelNumber())				//level number ,5=cube height
 			{
+				
 				FindObjectOfType<GameManager>().endGame();
 			}
 		}
