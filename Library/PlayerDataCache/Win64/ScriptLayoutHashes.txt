@@ -90,7 +90,7 @@ aa165095bcf0f4d99594ea33df01c81b UnityEngine.UI.dll:UnityEngine.UI.Slider
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 114e8c1e8771e0e7ba48ab7a8aefd655 Assembly-CSharp.dll:.cam_follow_player
-3b60ede0b422d85f0e3a5cd5c99a0f74 Assembly-CSharp.dll:.GameManager
+f5ec9f1b2fea772fc847f562d32a8cd6 Assembly-CSharp.dll:.GameManager
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -123,10 +123,10 @@ dfdf071491894e9584ebf921ad04a7ab Assembly-CSharp.dll:.rotateCamera
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
-35b59fb74c6f52b62dd4aed53e57fc41 Assembly-CSharp.dll:.player_collision
+6b008d5333c1d5962364060d2f673ae7 Assembly-CSharp.dll:.player_collision
 336d6145d7322bf813306f30242079a8 Assembly-CSharp.dll:.Target
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
-c5cec5a1d19d91e22ffb6e488beaeb97 Assembly-CSharp.dll:.createBlocks
+4ee83a0207d0ce29ab32825882e9aeff Assembly-CSharp.dll:.createBlocks
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
@@ -171,6 +171,7 @@ df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 9b1f8f7108e654c8e7264bed4be3ef39 Assembly-CSharp.dll:.creditsMusicPlayer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Pickup
+fdf0b965fbf9714d828f79bc49bd9dd1 Assembly-CSharp.dll:.teleporter_script
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 8790169f672b1cd968f4596bccbbfca5 Assembly-CSharp.dll:.backToMainMenu
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.credits

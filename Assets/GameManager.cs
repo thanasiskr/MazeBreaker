@@ -11,12 +11,12 @@ public class GameManager : MonoBehaviour
     private int N;
     private int L;
     private int currentScore;
-
-    public GameObject player;
     private ArrayList teleporterList;
     private bool gameEnded = false;
 
     //unity objects
+    public GameObject player;
+    public GameObject teleportFlashScreen;
     public Image crosshair;
     public GameObject winUi;
     public GameObject loseUi;
@@ -31,9 +31,7 @@ public class GameManager : MonoBehaviour
     public Camera camera4;
     public Camera camera5;
 
-    //int currentCamera = 0;
-   
-
+    
     Camera[] cameras = new Camera[6];
     private void Start()
     {
@@ -120,6 +118,13 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void teleportFlash() {
+        teleportFlashScreen.SetActive(true);
+        Invoke("flashOff",0.2f);                
+    }
+    private void flashOff() {
+        teleportFlashScreen.SetActive(false);
+    }
 
     //getters and setters for gameManager fields
 

@@ -7,6 +7,13 @@ using System.Collections;
 public class createBlocks : MonoBehaviour
 {
     //unity objects
+    public GameObject terrain;
+
+    public GameObject margin1;
+    public GameObject margin2;
+    public GameObject margin3;
+    public GameObject margin4;
+
     public GameManager manager;
     public GameObject teleporter;
 
@@ -41,7 +48,7 @@ public class createBlocks : MonoBehaviour
     ArrayList teleporters=new ArrayList();
     
 
-    
+   
     void setPlayerPosition(Vector3[]array) {
         if (player_active == false)
         {
@@ -100,8 +107,16 @@ public class createBlocks : MonoBehaviour
         axeCounter.text= "Axes:" + K.ToString();
 
         //Display score is 0
-
         scoreText.text ="Score:" +score.ToString();
+
+        //terrain.transform.localScale += new Vector3(50*N,0,50*N);
+
+        margin1.transform.localScale += new Vector3(0, 50 * L, 0);
+        margin2.transform.localScale += new Vector3(0, 50 * L, 0);
+        margin3.transform.localScale += new Vector3(0, 50 * L, 0);
+        margin4.transform.localScale += new Vector3(0, 50 * L, 0);
+
+        
 
         string[] types=new string[16];
         for (i = 0; i < L; i++) //level for loop

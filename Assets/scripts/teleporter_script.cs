@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class teleporter_script : MonoBehaviour
 {
@@ -56,7 +57,7 @@ public class teleporter_script : MonoBehaviour
                 
                 for (i = 0;i< max; i++) {
                     float pos = y;
-                    if (((Vector3)teleporters[i]).y > y+3 )
+                    if (((Vector3)teleporters[i]).y > y+3 )                 
                     {
                         Debug.Log("Found upper level!");
                         spawn_index = i;
@@ -70,9 +71,12 @@ public class teleporter_script : MonoBehaviour
                 }
 
                 //transfer player
+                
                 player.SetActive(false);
+               
                 Vector3 spawn_position = (Vector3)teleporters[spawn_index];
                 player.transform.SetPositionAndRotation(spawn_position, Quaternion.identity);
+                manager.teleportFlash();
                 player.SetActive(true);
                 manager.setTeleported(true);
             }
