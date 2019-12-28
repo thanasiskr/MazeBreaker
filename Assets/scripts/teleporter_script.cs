@@ -16,26 +16,19 @@ public class teleporter_script : MonoBehaviour
     int max;
     ArrayList teleporters;
     
-    
-
-
     void Start()
     {
-       
         tpSource.clip = teleportSound;
         manager = FindObjectOfType<GameManager>().GetComponent<GameManager>();  //getComponent if its attached to smth,first i need to find it with findObjectofType()
         player = manager.getPlayer();
         
        
         teleporters = manager.getTeleporterList();
-        max = teleporters.Count;
-        
+        max = teleporters.Count; 
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        
-
         if ((collision.collider.tag == "player"))       //player collides with teleporter floor
         {
             if (!manager.getTeleported())
@@ -55,16 +48,17 @@ public class teleporter_script : MonoBehaviour
                 float y = player.transform.position.y;
                 float z = player.transform.position.z;
                 
-                for (i = 0;i< max; i++) {
+                for (i = 0;i< max; i++)
+                {
                     float pos = y;
                     if (((Vector3)teleporters[i]).y > y+3 )                 
                     {
                         Debug.Log("Found upper level!");
                         spawn_index = i;
                         break;
-
                     }
-                    else {
+                    else
+                    {
                         Debug.Log("Didnt find any .Go random");
                         spawn_index = j;
                     }
@@ -84,16 +78,7 @@ public class teleporter_script : MonoBehaviour
             {
                 manager.setTeleported(false);
             }
-
-
-
-
         }
-        
-       
-
-
     }
-
 }
 

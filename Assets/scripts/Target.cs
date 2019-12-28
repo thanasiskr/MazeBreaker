@@ -9,7 +9,6 @@ public class Target : MonoBehaviour
     public AudioClip crumble;
     public AudioSource forCrumble;
 
-     
     public int health = 3;
     public float x;
     public float y;
@@ -24,7 +23,8 @@ public class Target : MonoBehaviour
     }
     public void takeDamage(int amount) {
         health -= amount;
-        if (health == 0) {                                  //cube breaks
+        if (health == 0) //cube breaks
+		{                                  
             forCrumble.Play();
              x = transform.position.x;
              y = transform.position.y-2;                 //at the height of the player
@@ -40,12 +40,13 @@ public class Target : MonoBehaviour
             Invoke("despawnDebris",1);
         }
     }
-    void break_obstacle() {
+    void break_obstacle()
+    {
         Destroy(gameObject);
        
     }
-    void spawn_axes() {
-        //if a cube breaks i can randomly spawn an axe that can be picked up
+    void spawn_axes() //if a cube breaks i can randomly spawn an axe that can be picked up
+	{
         System.Random rnd = new System.Random();
         int i = rnd.Next(0, 4);      //rand num from(0,3)
         if (i == 0 || i == 1)
@@ -54,35 +55,29 @@ public class Target : MonoBehaviour
             Instantiate(pickup_axe, pos, Quaternion.identity);
             
         }
-      
-
-
     }
-    void despawnDebris() {
+
+    void despawnDebris()
+    {
         int i;
         for (i = 0; i < 8; i++)
         {
 
             Destroy(spawnedDebris[i]);
         }
-        
     }
     
-
     void spawnDebris(Vector3 vector)
     {
         //Vector3 pos = new Vector3(x, y, z);
         int i;
-        for (i = 0; i < 8; i++) {
+        for (i = 0; i < 8; i++)
+        {
             //vector.x = vector.x + i * 0.5f;
             vector.z = vector.z + i*0.1f;
             vector.y = vector.y + i * 0.1f;
 
             spawnedDebris[i]=Instantiate(debris, vector, Quaternion.identity);
         }
-
-
     }
-
-
 }

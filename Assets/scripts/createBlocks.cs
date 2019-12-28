@@ -49,7 +49,8 @@ public class createBlocks : MonoBehaviour
     
 
    
-    void setPlayerPosition(Vector3[]array) {
+    void setPlayerPosition(Vector3[]array)
+    {
         if (player_active == false)
         {
             System.Random rnd = new System.Random();
@@ -132,9 +133,7 @@ public class createBlocks : MonoBehaviour
                     data = reader.ReadLine();
                     //Debug.Log("Read line:"+data);         //reading each line ,splitting and converting each char to string.
                     types = data.Split(' ');            //cube types for each line
-                   // Debug.Log("Size of array:"+types.Length);
-                    
-                    
+                   // Debug.Log("Size of array:"+types.Length);  
                 }
                 
                 for (k = 0; k < N; k++)
@@ -143,35 +142,39 @@ public class createBlocks : MonoBehaviour
                     //Vector3 pos = new Vector3(-47 + z, 3 + y, -47 + x );    //to look the .maz from the front
                     Vector3 pos = new Vector3(-47 + x, 3 + y, -47 + z); //default positions
 
-                    if (types[k].Equals("R")) {
+                    if (types[k].Equals("R"))
+                    {
                         Instantiate(redBlock, pos, Quaternion.identity);
                     }
-                    if (types[k].Equals("G")) {
+                    if (types[k].Equals("G"))
+                    {
                         Instantiate(greenBlock, pos, Quaternion.identity);
                     }
-                    if (types[k].Equals("B")) {
+                    if (types[k].Equals("B"))
+                    {
                         Instantiate(blueBlock, pos, Quaternion.identity);
                     }
-                    if (types[k].Equals("T2")) {
+                    if (types[k].Equals("T2"))
+                    {
                         Instantiate(marbleBlock, pos, Quaternion.identity);
                     }
-                    if (types[k].Equals("T3")) {
+                    if (types[k].Equals("T3"))
+                    {
                         Instantiate(rockBlock, pos, Quaternion.identity);
-
                     }
-                    if (types[k].Equals("T1")) {
+                    if (types[k].Equals("T1"))
+                    {
                         Instantiate(brickBlock, pos, Quaternion.identity);
-
                     }
                     if (types[k].Equals("E"))
                     {
-                        if (i == 0 && emptyCounter<5) {                             //change 5-->add more vectors
+                        if (i == 0 && emptyCounter<5) //change 5-->add more vectors
+						{                             
                             //storing 5 empty spots for random player start position
                             Vector3 emptypos = new Vector3(-47 + x, 3 + y, -47 + z);
                             emptySpots[emptyCounter] = emptypos;
                             emptyCounter++;
                         }
-                        
                     }
                     if (types[k].Equals("W"))
                     {
@@ -181,19 +184,14 @@ public class createBlocks : MonoBehaviour
 
                     }
 
-
                     x = x + 5;
-                    
                 }
                 x = 0;
                 z = z + 5;
-               
             }
-
             y = y + 5;
             z = 0;
             x = 0;
-
         }
         setPlayerPosition(emptySpots);
 
@@ -204,11 +202,6 @@ public class createBlocks : MonoBehaviour
 
         //teleporter stuff
         manager.setTeleporterList(teleporters);
-        //manager.setPlayer(player.gameObject);
-       
+        //manager.setPlayer(player.gameObject);   
     }
-   
-
-
-
 }

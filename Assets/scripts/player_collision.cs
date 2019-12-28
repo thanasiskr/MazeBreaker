@@ -9,12 +9,9 @@ public class player_collision : MonoBehaviour
     public GameManager manager;
     public GameObject player;
 
-   
     void Start()
     {
-        source.clip = bump;
-        
-       
+        source.clip = bump; 
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -23,8 +20,5 @@ public class player_collision : MonoBehaviour
         {    
             source.Play();
         }
-        
-
     }
-
 }

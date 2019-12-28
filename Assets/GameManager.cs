@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     
     Camera[] cameras = new Camera[6];
+
     private void Start()
     {
         source.clip = tada;
@@ -114,15 +115,16 @@ public class GameManager : MonoBehaviour
             cameras[4].gameObject.SetActive(false);
             cameras[5].gameObject.SetActive(true);
         }
-
-
     }
 
-    public void teleportFlash() {
+    public void teleportFlash()
+    {
         teleportFlashScreen.SetActive(true);
         Invoke("flashOff",0.2f);                
     }
-    private void flashOff() {
+
+    private void flashOff()
+    {
         teleportFlashScreen.SetActive(false);
     }
 
@@ -132,87 +134,103 @@ public class GameManager : MonoBehaviour
     {
        return teleported;
     }
-    public void setTeleported(bool tele) {
+
+    public void setTeleported(bool tele)
+    {
         teleported = tele;
     }
-    public void setPlayer(GameObject p) {
+
+    public void setPlayer(GameObject p)
+    {
         player = p;
     }
-    public GameObject getPlayer() {
+
+    public GameObject getPlayer()
+    {
         return player;
     }
-    public void setTeleporterList(ArrayList teleporters) {
+
+    public void setTeleporterList(ArrayList teleporters)
+    {
         teleporterList = teleporters;
     }
-    public ArrayList getTeleporterList() {
+
+    public ArrayList getTeleporterList()
+    {
         return teleporterList;
     }
-    public int getCurrentScore() {
+
+    public int getCurrentScore()
+    {
         return currentScore;
     }
-    public void setCurrentScore(int score) {
+
+    public void setCurrentScore(int score)
+    {
         currentScore = score;
     }
-    public void setN(int num) {
+
+    public void setN(int num)
+    {
         N = num;
     }
+
     public int getN()
     {
        return (N);
     }
 
-    public void setAxeNumber(int axes) {
+    public void setAxeNumber(int axes)
+    {
         numberofAxes = axes;
         
     }
+
     public int getAxeNumber()
     {
         return (numberofAxes);
-
     }
 
     public void setLevelNumber(int num)
     {
         L = num;
-       
     }
+
     public int getLevelNumber()
     {
        return L ;
     }
 
-    public void endGame() {
+    public void endGame()
+    {
         if (!gameEnded) {
             source.Play();
             finalScore.text = "Your score is:" + currentScore.ToString();
             winUi.SetActive(true);        //congrats screen
             Invoke("loadCredits", 3);       //wait 3 second ,then show credits scene
-            gameEnded = true;
-           
-            
+            gameEnded = true;  
         }
-        
     }
-    private void loadCredits() {
+
+    private void loadCredits()
+    {
         //cursor on
         Cursor.visible = true;
         SceneManager.LoadScene("credits", LoadSceneMode.Single);
     }
+
     public void gameOver() {
         if (!gameEnded)
         {
             loseUi.SetActive(true);
             Debug.Log("You gave up ,your score is 0");
             gameEnded = true;
-            Application.Quit();  // quit the game works only if built!
-            
+            Application.Quit();  // quit the game works only if built!  
         }
     }
+
     public void restartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);  
     }
-
-
 }

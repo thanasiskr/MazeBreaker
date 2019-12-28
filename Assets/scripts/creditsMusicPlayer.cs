@@ -9,7 +9,5 @@ public class creditsMusicPlayer : MonoBehaviour
     {
         source.clip = clip;
         source.Play();
-    }
-
-    
+    }   
 }

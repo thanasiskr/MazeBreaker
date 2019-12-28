@@ -29,10 +29,11 @@ public class axe : MonoBehaviour
         numberofAxes = manager.getAxeNumber();
         numberofAxesLeft = numberofAxes;
         N = manager.getN();
-
     }
 
-    void rotateAxeBack() {  //bring back the axe to create animation
+	//bring back the axe to create animation
+	void rotateAxeBack()
+    {  
         pickaxe.transform.Rotate(0, -45, 0);
     }
     void Update()
@@ -44,17 +45,16 @@ public class axe : MonoBehaviour
         manager.setCurrentScore(score_number);          //updating manager score value
         axeCounter.text = "Axes:" + numberofAxesLeft.ToString();
 
-
-        if (Input.GetButtonDown("Fire1") && numberofAxesLeft>0) {     //left mb 
+        if (Input.GetButtonDown("Fire1") && numberofAxesLeft>0) //left mb
+        {   
             pickaxe.transform.Rotate(0,45,0);
             hit();
             Invoke("rotateAxeBack",0.1f);  //delaying to make axe animated
         }
-        if (Input.GetKey("f")) {     //right mb
+        if (Input.GetKey("f")) //right mb
+		{     
             Debug.Log("This pick up button");
             pickupAxe();
-
-
         }
         //changing hold axe material on successful hits
         if (successHits > 5 && successHits < 8)
@@ -65,11 +65,13 @@ public class axe : MonoBehaviour
         {
             pickaxe.GetComponent<MeshRenderer>().material = black;
         }
-        else {
+        else
+        {
             pickaxe.GetComponent<MeshRenderer>().material = axe_default;
         }
 
-        if (successHits == 10) {        //Every 10 hits successful the axe breaks
+        if (successHits == 10) //Every 10 hits successful the axe breaks
+		{        
             numberofAxesLeft= numberofAxesLeft - 1;
             axeCounter.text = "Axes:" + numberofAxesLeft.ToString();
             successHits = 0;
@@ -78,11 +80,11 @@ public class axe : MonoBehaviour
         {
             pickaxe.SetActive(false);
         }
-        else {
+        else
+        {
             pickaxe.SetActive(true);
 
         }
-
     }
     void hit()
     {
@@ -91,7 +93,8 @@ public class axe : MonoBehaviour
         {
            // Debug.Log(obj.transform.tag);
             Target target =obj.transform.GetComponent<Target>();
-            if (target!=null && target.tag == "obstacle") {
+            if (target!=null && target.tag == "obstacle")
+            {
 
                 forHit.Play();
                 target.takeDamage(1);                   //does 1 damage point to block
@@ -99,7 +102,6 @@ public class axe : MonoBehaviour
                 
             }
         }
-
     }
     void pickupAxe() {
         RaycastHit obj;
@@ -112,14 +114,9 @@ public class axe : MonoBehaviour
             if (axe != null && axe.tag == "axe")
             {
                 Debug.Log("Picked up axe!");
-                
-
                 Destroy(axe.gameObject);              //destroy the object after claimed
                 numberofAxesLeft++;
-              
             }
         }
-
     }
-
 }

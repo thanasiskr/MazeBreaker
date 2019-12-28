@@ -10,7 +10,4 @@ public class playMenuMusic : MonoBehaviour
         source.clip = clip;
         source.Play();
     }
-
-    
-     
 }

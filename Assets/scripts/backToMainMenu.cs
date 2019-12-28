@@ -6,11 +6,10 @@ public class backToMainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject current;
-    public void backToMenu() {
+    public void backToMenu()
+    {
         mainMenu.SetActive(true);
         current.SetActive(false);
-       
-
     }
 
 }
