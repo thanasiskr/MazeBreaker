@@ -112,10 +112,10 @@ public class createBlocks : MonoBehaviour
 
         //terrain.transform.localScale += new Vector3(50*N,0,50*N);
 
-        margin1.transform.localScale += new Vector3(0, 50 * L, 0);
-        margin2.transform.localScale += new Vector3(0, 50 * L, 0);
-        margin3.transform.localScale += new Vector3(0, 50 * L, 0);
-        margin4.transform.localScale += new Vector3(0, 50 * L, 0);
+        margin1.transform.localScale += new Vector3(0, 5 * L, 0);
+        margin2.transform.localScale += new Vector3(0, 5 * L, 0);
+        margin3.transform.localScale += new Vector3(0, 5 * L, 0);
+        margin4.transform.localScale += new Vector3(0, 5 * L, 0);
 
         
 
