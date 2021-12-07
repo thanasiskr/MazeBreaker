@@ -10,7 +10,7 @@ public class player_movement : MonoBehaviour
 	public Rigidbody rb;
 	//fields
 	private float force = 7.0f;
-	private float jump = 8.5f;          //match with cube height TODO
+	private float jump = 8.5f;          //match with cube height 
 
 
 	private void Start()
